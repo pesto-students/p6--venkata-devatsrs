@@ -8,9 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Page Title -->
-    <title>Catty Board</title>
+    <meta name="author" content="Deven Sitapar">
+    <meta name="description" content="Catty Board Sample">
 
+
+    <meta property="og:title" content="Catty Board">
+    <meta property="og:description" content="Catty Board description">
+    <meta property="og:image" content="/assets/cattyboard.jpg">
+    <meta property="og:url" content="/index.html">
+    <meta property="og:site_name" content="Catty Board">
 
     <!-- Import Normalize.css : 
         * Resets all thehas styles that come with the browser’s user agent.	
@@ -27,8 +33,15 @@
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Page Title -->
+    <title>Catty Board</title>
 
 </head>
 <!-- Head Ends -->
@@ -45,70 +58,75 @@
             4.There should be one or more Git commits with meaningful commit messages. 
         -->
 
-        <div class="container">
-            
+        <main>
             <!-- left sidebar  -->
-            <aside>
-                <i class="las la-bars"></i>
-                <i class="las la-home"></i>
-                <i class="las la-search"></i>
-                <i class="las la-volume-up"></i>
-                <i class="las la-user"></i>
-                <i class="las la-cog"></i>
-                <i class="las la-spotify"></i>
-                <i class="las la-soundcloud"></i>
-
-            </aside>
+            <div class="sidebar gray_bg">
+                <a href="#" class="black_color"><i class="las-font-size las la-bars"></i></a>
+                <a href="#" class="black_color"><i class="las-font-size las la-home"></i></a>
+                <a href="#" class="black_color"><i class="las-font-size las la-search"></i></a>
+                <a href="#" class="black_color"><i class="las-font-size las la-volume-up"></i></a>
+                <a href="#" class="black_color"><i class="las-font-size las la-user"></i></a>
+                <a href="#" class="black_color"><i class="las-font-size las la-cog"></i></a>
+                <a href="#" class="black_color"><i class="las-font-size las la-spotify"></i></a>
+                <a href="#" class="black_color"><i class="las-font-size las la-soundcloud"></i></a>
+            </div>
 
             <!-- body content -->
-            <div class="container2">
-                <header>
-                    <div class="h_image"><img src="assets/cattyboard.jpg" alt="Cattyboard album" align="left" /></div>
-                    <div class="h_title">
-                        <h1>Cattyboard Top 100 Single Charts (11.06.36)</h1>
-                        <p><strong>Artist</strong></p>
-                        <p><strong>2016 Charts 100 Songs</strong></p>
+            <div class="main_container">
+                <header class="dark_gray_bg">
+                    <div class="h_left">
+                        <img src="assets/cattyboard.jpg" alt="Cattyboard album" align="left" />
                     </div>
-                    <div class="h_bottom">
-                        <a href="#playall"><i class="las la-play"></i>Play All</a>
-                        <a href="#addto"><i class="las la-plus"></i>Add to</a>
-                        <a href="#more"><i class="las la-ellipsis-h"></i>More</a>
+                    <div class="h_right white_color">
+                        <div class="h_title ">
+                            <h1 class="h1 bold">Cattyboard Top 100 Single Charts (11.06.36)</h1>
+                            <p><strong>Artist</strong></p>
+                            <p><strong>2016 Charts 100 Songs</strong></p>
+                        </div>
+                        <div class="h_bottom">
+                            <a href="#playall" class="white_color"><i class="las la-play"></i>Play All</a>
+                            <a href="#addto" class="white_color"><i class="las la-plus"></i>Add to</a>
+                            <a href="#more" class="white_color"><i class="las la-ellipsis-h"></i>More</a>
+                        </div>
                     </div>
-
                 </header>
                 <!-- header ends  -->
-                <!-- <section class="song_list">
-                <div class="single_song">
-                    <div class="title">1. One Dance </div>
-                    <div class="singer">Singer name</div>
-                    <div class="period">2:54 </div>
-                    <div class="sync"><a href="#">Catty cloud sync</a></div>
-                </div>
-                <div class="single_song">
-                    <div class="title">2. Panda</div>
-                    <div class="singer">Singer name</div>
-                    <div class="period">2:54 </div>
-                    <div class="sync"><a href="#">Catty cloud sync</a></div>
-                </div>
-                <div class="single_song">
-                    <div class="title">3. Cant stop the feeling!</div>
-                    <div class="singer">Singer name</div>
-                    <div class="period">2:54 </div>
-                    <div class="sync"><a href="#">Catty cloud sync</a></div>
-                </div>
-                <div class="single_song">
-                    <div class="title">1. One Dance </div>
-                    <div class="singer">Singer name</div>
-                    <div class="period">2:54 </div>
-                    <div class="sync"><a href="#">Catty cloud sync</a></div>
-                </div>
-            </section>
-        -->
-            </div>
-            <!-- Container2 over -->
 
-        </div>
-        <!-- Container over -->
+                <article class="song_list black_color">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td scope="row">1. One Dance </td>
+                                <td>Singer name</td>
+                                <td>2:54</td>
+                                <td><a href="#" class="blue_color black_border">Catty cloud sync</a></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">2. Panda </td>
+                                <td>Singer name</td>
+                                <td>4:54</td>
+                                <td><a href="#" class="blue_color black_border">Catty cloud sync</a></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">3. Cant Stop the feeling </td>
+                                <td>Singer name</td>
+                                <td>3:54</td>
+                                <td><a href="#" class="blue_color black_border">Catty cloud sync</a></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">3. Work from home</td>
+                                <td>Singer name</td>
+                                <td>5:54</td>
+                                <td><a href="#" class="blue_color black_border">Catty cloud sync</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </div>
+            <!-- main_container2 over -->
+
+        </main>
+        <!-- main over -->
 
         <footer>
             <div class="f_left">
@@ -119,10 +137,10 @@
 
             <div class="f_right">
                 <div class="actions">
-                    <i class="las la-step-backward"></i>
-                    <i class="las la-step-forward"></i>
-                    <i class="las la-undo-alt"></i>
-                    <i class="las la-random"></i>
+                    <a href="#"><i class="las-font-size las la-step-backward"></i></a>
+                    <a href="#"><i class="las-font-size las la-step-forward"></i></a>
+                    <a href="#"><i class="las-font-size las la-undo-alt"></i></a>
+                    <a href="#"><i class="las-font-size las la-random"></i></a>
                 </div>
             </div>
 
@@ -130,5 +148,4 @@
     </div>
     <!-- Page ends -->
 </body>
-
 </html>
