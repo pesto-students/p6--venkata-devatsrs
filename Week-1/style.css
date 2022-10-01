@@ -1,0 +1,116 @@
+html {
+  height: 100%;
+}
+body {
+  font-family: "Lato", sans-serif;
+  height: 100%;
+}
+#app {
+  height: 100%;
+}
+
+/* Container is coverint complete body html */
+.container {
+  display: flex;
+  height: 100%;
+}
+
+p {
+  font-size: 12px;
+}
+/* Left Sidebar  */
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #ccc;
+  width: 1%;
+  padding: 5px;
+  height: 100%;
+}
+
+.container2 {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+/* Header board */
+header {
+  background-color: #454545;
+  color: #fff;
+  width: 100%;
+  padding: 30px 0;
+}
+header .h_title h1 {
+  font-size: 18px;
+}
+header .h_image img {
+  width: 200px;
+  padding: 0 30px;
+}
+header .h_bottom {
+  display: flex;
+  align-items: flex-end;
+}
+
+header .h_bottom a {
+  color: #fff;
+  padding: 0 20px;
+  text-decoration: none;
+  margin-top: 65px;
+}
+header .h_bottom a:first-child {
+  padding-left: 0px;
+}
+
+header .h_bottom a i {
+  padding-right: 5px;
+}
+
+section.song_list {
+  display: table;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  background-color: #43689b;
+  position: absolute;
+  bottom: 0;
+}
+footer .f_left {
+  flex-direction: column;
+  width: 10%;
+  font-size: 12px;
+}
+
+footer .f_left .h_image img {
+  padding: 8px;
+  width: 100px;
+}
+
+footer div.f_left p {
+  color: #fff;
+}
+footer div.f_left p {
+  color: #fff;
+}
+footer .f_right {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 90%;
+}
+footer .f_right .actions {
+  color: #fff;
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer .f_right .actions i.las {
+  padding: 0 100px;
+}
+
+footer .f_right .actions i.las:last-child {
+  padding-right: 10px;
+}
