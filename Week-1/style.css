@@ -63,7 +63,7 @@ a.blue_color:hover {
 }
 
 /* Left Sidebar  */
-div.sidebar {
+nav.sidebar {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
