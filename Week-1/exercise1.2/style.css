@@ -117,6 +117,7 @@ header .h_bottom a i {
 .song_list {
   display: table;
   width: 100%;
+  padding: 0 5px;
 }
 .song_list table {
   font-weight: bold;
