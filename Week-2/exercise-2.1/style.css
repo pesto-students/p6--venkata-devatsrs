@@ -62,6 +62,15 @@ a.blue_color:hover {
 }
 .row {
   flex-direction: column;
+  
+  
+}
+.wrap{
+  flex-wrap: wrap;
+}
+.col {
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .cross_center {
   flex-direction: column;
@@ -72,7 +81,9 @@ a.blue_color:hover {
 .container {
   width: 1024px;
 }
-
+.gutter{
+  padding: 0 2%;
+}
 /* Reusable class over */
 
 body {
@@ -100,8 +111,11 @@ footer p{
 }
 
 section > div {
-  width: 40%;
-  padding-right: 8%;
+   width: 430px; 
+   flex-grow: 1;
+}
+section > div{
+
 }
 
 section form {
