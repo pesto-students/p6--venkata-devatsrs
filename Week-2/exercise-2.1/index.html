@@ -93,7 +93,7 @@
                         </div>
                     </section>
                     <section class="flex col gutter">
-                        <form method="post" action="#" onsubmit="Javascript: return false;">
+                        <form method="post" action="#" onsubmit="Javascript: document.getElementsByClassName('done')[0].style.display ='block'; console.log('Done!'); return false;">
 
                             <p><label for="title_mr">Title </label>
                                 <input type="radio" name="title" id="title_mr" required value="mr" />
@@ -391,6 +391,7 @@
                             </p>
 
                             <p><input type="submit" name="btn_submit" id="btn_submit" value="Signup" /></p>
+                            <p class="done" style="display: none">Done!</p>
                         </form>
                     </section>
                 </div>
