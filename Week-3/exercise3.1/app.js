@@ -1,19 +1,8 @@
 /**
- * Exercise 3.1
- * Create a memoize function that remembers previous inputs and stores them in cache so that it won’t have to compute the same inputs more than once.
- * The function will take an unspecified number of integer inputs and a reducer method.
- *
- */
-
-/**
- * Memoization is an optimization technique that makes applications more efficient and faster.
- * By storing computation results in cache, so next time it's needed instead of computing it again.
- *  */
-
-/**
- * This function used to memoize the function result.
- * @param  {...any} args
- * @returns
+ * This function stores computed result into cache 
+ * Gets computed result from cache if exists.
+ * @param fn 
+ * @returns 
  */
 function memoize(fn) {
   // key value pair variable
@@ -35,10 +24,11 @@ function memoize(fn) {
   };
 }
 
+
 /**
- * Timer takes function as argument and
+ * Timer takes function as argument and 
  * runs the function and log effective time to run that function.
- * @param {*} fn
+ * @param fn 
  */
 function time(fn) {
   console.time(); // Starts timer
