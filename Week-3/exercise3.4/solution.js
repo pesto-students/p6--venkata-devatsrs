@@ -1,14 +1,17 @@
 function createStack() {
-  let items = [];
+  
+  // "Private" variable 
+  let _items = []; // Private variable not accessible outside function
+
   return {
     push(item) {
-      items.push(item);
+      _items.push(item);
     },
     pop() {
-      return items.pop();
+      return _items.pop();
     },
     log() {
-      return items;
+      return _items;
     },
   };
 }
@@ -18,6 +21,6 @@ stack.push(5);
 console.log(stack.pop()); // => 5
 stack.push(5);
 stack.push(50);
-console.log(stack.items);//undefined
+console.log(stack._items);//undefined
 console.log(stack.log());// [ 10, 5, 50 ]
 

@@ -1,6 +1,6 @@
 function createStack() {
   return {
-    items: [],
+    items: [], // Public variable is accessible outside function
     push(item) {
       this.items.push(item);
     },
