@@ -1,8 +1,11 @@
 
 // .bind() Method
 
+// default 
 const appType = 'App List' ;
 const appName = 'here!' ;
+
+// What is best App
 let best = {
     app : function(like){
 
@@ -13,6 +16,8 @@ let best = {
         return `Best ${this.appType} is ${this.appName} ${like}`;
     }
 };
+
+// What are  best Apps
 let email = {
     appType : 'Email' ,
     appName : 'Gmail',
@@ -39,6 +44,7 @@ console.log(result());
 result = best.app.bind(editor,', I love it');
 console.log(result());
 
+// Output:
 // Best App List is here! 
 // Best Email is Gmail , Wow
 // Best Messenger is Skype , I like it
