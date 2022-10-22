@@ -1,3 +1,39 @@
+for (var i = 0; i < 3; i++) {
+  setTimeout(     // TypeError [ERR_INVALID_CALLBACK]: Callback must be a function. Received undefined
+    (function (i) {
+      return function() {
+        console.log(i);
+      }
+    })(i),
+    1000
+  );
+}
+
+return;
+
+// Chapter 2.2 - Closure Examples
+function a(){
+
+  let fn;
+  {
+   
+    var x = 5;
+
+    fn = function(){
+      console.log(x); // ! 5 
+    }
+
+  }
+
+  return fn;
+
+}
+var x = 10;
+const b = a();
+
+return ;
+
+
 // IIFE  (Immediately Invoked Function Expression)
 for (var i = 0; i < 3; i++) {
     setTimeout(
@@ -11,7 +47,9 @@ for (var i = 0; i < 3; i++) {
       1000
     );
 }
-
+// 0
+// 1
+// 2
 
 return ;
 for (var i = 0; i < 3; i++) {
@@ -93,9 +131,9 @@ console.log("3" * 4); //12  -> because cant do multiply operation on string
 console.log("abcd".length); // 4
 
 // ! Explicit Type casting
-const a = parseInt("3", 10);
-const b = parseInt("4", 10);
-console.log(a * b); // 12
+const a_ = parseInt("3", 10);
+const b_ = parseInt("4", 10);
+console.log(a_ * b_); // 12
 
 return;
 
@@ -108,6 +146,7 @@ return;
 
 // NaN
 console.log(NaN + 1); // NaN
+console.log(undefined + 1); // NaN
 console.log(NaN === NaN); // false because NaN !== NaN
 console.log([1, 2, NaN, 3].indexOf(3)); // 3
 console.log([1, 2, NaN, 3].indexOf(NaN)); // -1
