@@ -6,7 +6,7 @@ Implement a function named `getNumber` which generatesa random umber.
 If randomNumberis divisible by 5 it will reject the promise else it will resolve the promise. 
 Let’s also keep the promise resolution/rejection time as a variable.
 
-
+![alt text](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/promises.png)
 ## Guidlines:
 - JS promises should not be used.
 - A custom promise function should be created.
