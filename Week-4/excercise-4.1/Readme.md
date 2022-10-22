@@ -32,3 +32,13 @@ Let’s also keep the promise resolution/rejection time as a variable.
 - ES6 Arrow functions cant be used for constructor.
 - How to handle call back function inside a custom function.
 
+## Rererences
+
+- https://bobbyhadz.com/blog/javascript-typeerror-callback-is-not-a-function#:~:text=The%20%22callback%20is%20not%20a,parameter%20when%20calling%20the%20function.
+
+- https://developer.mozilla.org/en-US/docs/Glossary/Polyfill#:~:text=A%20polyfill%20is%20a%20piece,do%20not%20natively%20support%20it.
+
+- https://stackoverflow.com/questions/10107198/javascript-not-a-constructor-exception-while-creating-objects
+
+- https://stackoverflow.com/questions/72819236/how-to-write-polyfill-of-promise-which-works-for-promise-resolve
+
