@@ -2,36 +2,73 @@
  * Program to demostrate Promise without use of JS Promise() function
  */
 
-function myPolyPromise(callback){
-
-    this.resolve = function(){
-        console.log("Resolve");
-        console.log(arguments);
-    }
+/**
+ * This is Polifill for Promise , using callback function it triggers its core resolve and reject functions
+ * @param callback 
+ * @returns output of callback
+ */
+function myPolyPromise(callback) {
     
-    this.reject = function(){
-        console.log("Reject");
-        console.log(arguments);
-    }
+  this.resolve = function (result) {
+    console.log("Resolve");
+    console.log(arguments);
+    console.log(result);
+    // return this;
+  };
 
-    this.then = function(){
-        console.log("Then");
-        console.log(arguments);
-    }
+  this.reject = function (result) {
+    console.log("Reject");
+    console.log(arguments);
+    console.log(result);
+    // return this;
 
-    return callback(this.resolve,this.reject);
-    // console.log(arguments);
-    // callback(this.resolve, this.reject);
+  };
 
+  this.then = function (callback) {
+    console.log("Then");
+    console.log(arguments);
+    callback();
+    // return this;
+
+  };
+
+  return callback(this.resolve, this.reject);
+  // console.log(arguments);
+  // callback(this.resolve, this.reject);
+}
+
+const getNumber = () => {
+  // 0 - 9
+  let random = Math.floor(Math.random() * 10);
+  // let random = 5;
+  return random;
 };
 
-let p = new myPolyPromise((resolve, reject)=>{
-    // console.log(arguments);
-    // console.log("In callback");
+let isDivisibleBy = (number, divided) => {
+  if (number % divided === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
-    
-    resolve(1);
-}).then();
+let p = new myPolyPromise((resolve, reject) => {
+  // console.log(arguments);
+  // console.log("In callback");
+
+  let number = getNumber();
+  number = 4;
+  console.log(`number = ${number}`);
+  if (isDivisibleBy(number, 5)) {
+    resolve("Yes");
+  } else {
+    reject("No");
+  }
+
+  return resolve(1);
+}).then((result)=>{
+      console.log("Then callback");
+});
 
 
 //Learning
