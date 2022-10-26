@@ -1,24 +1,51 @@
-/**
- * The programe to demostrate interator.
- */
+class Fibonacci {
+    
 
-var arr = [];
-
-for (let i = 0; i < 10; i++) {
-  let next = 0;
-  if (i == 0) {
-    next = 0; // 0=>0
-  } else if (i == 1) {
-    next = 1; // 0=>0, 1=>1
-  } else {
-    // 0=>0, 1=>1, 2=>1
-    // 0=>0, 1=>1, 2=>1, 3=>2
-    // 0=>0, 1=>1, 2=>1, 3=>2, 4=>3
-    // 0=>0, 1=>1, 2=>1, 3=>2, 4=>3, 4=>5
-    // ...
-    next = arr[i-2] + arr[i-1]; // 0 1 2
+  constructor() {
+      this.n1 = 0;
+      this.n2 = 1;
+      this.next = 0;
+      this.done = false;
   }
-  arr.push(next);
-  console.log(next);
-}
+  [Symbol.iterator]() {
+      
+    return  {
+      
+      next: () => {
+        
 
+              if( this.n1 < 30 ){
+
+                // add prev 2 values 
+                this.next = this.n1 + this.n2 ;
+
+                //swap values 
+                this.n1 = this.n2;
+                this.n2 = this.next;
+  
+              }else{
+
+                //stop flag 
+                this.done = true;
+
+              }
+              
+              return { value: this.n1, done: this.done };
+              
+          },
+          return: () => {
+              // cleaning up...
+              return { value: null, done: true };
+          }
+      }
+  }
+}
+let fibonacci = new Fibonacci();
+
+console.log(fibonacci.n1); // first 0 
+for (const num of fibonacci) {
+  if( num > 13 ) { // cleanup case example
+      break;
+  }
+  console.log(num);
+}
