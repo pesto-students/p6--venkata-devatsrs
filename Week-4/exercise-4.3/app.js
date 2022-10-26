@@ -1,51 +1,35 @@
-class Fibonacci {
-    
+const fibonacci = (n) => ({
+  [Symbol.iterator]: () => {
+    let i = 0,
+      old = (new1 = 0);
 
-  constructor() {
-      this.n1 = 0;
-      this.n2 = 1;
-      this.next = 0;
-      this.done = false;
-  }
-  [Symbol.iterator]() {
-      
-    return  {
-      
+    return {
       next: () => {
+        // interation condition
         
+        if (i++ <= n) {
+          //add old and new number to next  new number  and swap
+          [old, new1] = [new1, old + new1 || 1];
 
-              if( this.n1 < 30 ){
+          return { value: old, done: false };
+        }
 
-                // add prev 2 values 
-                this.next = this.n1 + this.n2 ;
+        // when breaks
+        return { done: true };
+      },
+      return: () => {
+        // cleaning up...
+        return { value: null, done: true };
+      },
+    };
+  },
+});
 
-                //swap values 
-                this.n1 = this.n2;
-                this.n2 = this.next;
-  
-              }else{
-
-                //stop flag 
-                this.done = true;
-
-              }
-              
-              return { value: this.n1, done: this.done };
-              
-          },
-          return: () => {
-              // cleaning up...
-              return { value: null, done: true };
-          }
-      }
-  }
-}
-let fibonacci = new Fibonacci();
-
-console.log(fibonacci.n1); // first 0 
-for (const num of fibonacci) {
-  if( num > 13 ) { // cleanup case example
-      break;
+//console.log([...fibonacci(6)]);
+for (const num of fibonacci(6)) {
+  if (num > 8) {
+    // cleanup case example
+    break;
   }
   console.log(num);
 }
