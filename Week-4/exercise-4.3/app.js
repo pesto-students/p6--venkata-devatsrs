@@ -1,3 +1,9 @@
+/**
+ * The programe to demostrate interator with fibonacci series
+ * Reference:  https://medium.com/@akshayshekokar/fibonacci-series-with-iterators-90a8b3dd0d92
+ */
+
+
 const fibonacci = (n) => ({
   [Symbol.iterator]: () => {
     let i = 0,
