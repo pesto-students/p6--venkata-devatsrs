@@ -3,7 +3,11 @@
  * Reference:  https://medium.com/@akshayshekokar/fibonacci-series-with-iterators-90a8b3dd0d92
  */
 
-
+/**
+ * Return a fibonacci series with help of iterator
+ * @param {string} n 
+ * @returns 
+ */
 const fibonacci = (n) => ({
   [Symbol.iterator]: () => {
     let i = 0,
@@ -30,9 +34,9 @@ const fibonacci = (n) => ({
     };
   },
 });
-
+const fibonacciObj = fibonacci(6)
 //console.log([...fibonacci(6)]);
-for (const num of fibonacci(6)) {
+for (const num of fibonacciObj) {
   if (num > 8) {
     // cleanup case example
     break;
