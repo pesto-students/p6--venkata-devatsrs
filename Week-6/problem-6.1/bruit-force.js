@@ -26,3 +26,4 @@ for (let k = 0; k < A.length; k++) {
 console.log(maxSum);
 console.log(outputArray);
 // Time Complexity : O(N3)
+// Space Complexity : O(N2)

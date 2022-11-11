@@ -17,3 +17,6 @@ for (let i = 0; i < A.length; i++) {
 }
 console.log(max_so_far);
 console.log(final_sub_array);
+
+// Time Complexity : O(N)
+// Space Complexity : O(N)
