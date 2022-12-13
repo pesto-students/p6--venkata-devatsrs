@@ -6,6 +6,7 @@ console.log(this); // undefined for web/windows
 
 //In Nodejs
 console.log(this); // {} for nodejs
+console.log(global); // <ref *1> Object [global] {...}     for nodejs
 console.log(this === global ); // false -> file level this !== global 
 
 // In Nodejs CJS commonjs modules -> this is bound to exports object 

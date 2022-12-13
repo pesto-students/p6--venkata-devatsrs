@@ -127,7 +127,7 @@ let isDivisibleBy = (number, divisibleBy) => {
 console.log("Start");
 
 // Initialize Promise function
-let p = new myPolyPromise((resolve, reject) => {
+new myPolyPromise((resolve, reject) => {
   
 
   let number = getNumber(), divideBy = 5;

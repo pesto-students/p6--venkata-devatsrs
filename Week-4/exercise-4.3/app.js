@@ -9,6 +9,7 @@
  * @returns 
  */
 const fibonacci = (n) => ({
+
   [Symbol.iterator]: () => {
     let i = 0,
       old = (new1 = 0);
@@ -35,6 +36,7 @@ const fibonacci = (n) => ({
   },
 });
 const fibonacciObj = fibonacci(6)
+
 //console.log([...fibonacci(6)]);
 for (const num of fibonacciObj) {
   if (num > 8) {
@@ -43,3 +45,11 @@ for (const num of fibonacciObj) {
   }
   console.log(num);
 }
+
+// 0
+// 1
+// 1
+// 2
+// 3
+// 5
+// 8

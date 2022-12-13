@@ -10,7 +10,7 @@ describe("Sum Test Cases", () => {
   });
 
   test("adding -1 + -2 should return -3", () => {
-    expect(mathOperations.sum(-1, -2)).toBeCloseTo(-3); // 0.3000000002
+    expect(mathOperations.sum(-1, -2)).toBe(-3); 
   });
 
   test("adding 'a' + 'b' should return ab", () => {

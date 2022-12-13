@@ -16,7 +16,7 @@ var promiseHelper = {
   },
   log1: () => {
     console.log(this);
-    console.log`(this.message + " Works");
+    console.log(this.message + " Works");
   },
 };
 promiseHelper.log.bind({ message: "test" })();

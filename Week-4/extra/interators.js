@@ -35,6 +35,7 @@ console.log(rest); // [ '😀', '😃', 'c' ]
 
 console.log(...emojis); // a 🙂 😀 😃 c
 
+const emojis = 'a🙂😀😃c';
 function x(firstChar, firstEmoji, ...rest){
     console.log(firstChar ); // a 
     console.log(firstEmoji);  // 🙂
