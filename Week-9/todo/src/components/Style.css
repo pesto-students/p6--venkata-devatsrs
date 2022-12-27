@@ -1,0 +1,46 @@
+.createTodo{
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem ;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.todoList{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 97vh;
+    margin: 0 auto;
+}
+.todoList ul{
+    width: 100%;
+  
+}
+.todoList li{
+    list-style:none;
+    text-align: left;
+    display: flex;
+}
+
+.todoList li label{
+    padding: 0.3rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+
+.todoList li input[type="checkbox"]{
+    width: 30px;
+    height: 30px;
+}
+.todoList li input[type="checkbox"]:checked+label{
+    text-decoration: line-through;
+    color: #ccc;
+    
+}
+  
