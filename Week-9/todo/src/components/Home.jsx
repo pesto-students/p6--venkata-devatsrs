@@ -67,6 +67,9 @@ const Form = ({ setTodos }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const todo = e.target[0].value;
+        
+        if(todo === "") return alert("Please enter a todo");
+
         // console.log(e.target[0].value);
         setTodos((prev) => [...prev, todo]);
         e.target[0].value = ""
