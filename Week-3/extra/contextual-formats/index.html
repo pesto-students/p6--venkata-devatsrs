@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In DOM event handler</title>
+    <script src="script.js" type="module" ></script>
+</head>
+<body>
+
+    <button onclick="{showInResult(this.tagName)}" >Click Here</button>
+
+    <ul>
+        <li>Item 1</li>
+        <li id="second-li">Item 2</li>
+    </ul>
+    
+    <div id="result"></div>
+
+    <script>
+        function showInResult(str){
+
+            const div = document.querySelector("#result");
+            const p = document.createElement("p");
+            p.innerHTML = str;
+
+            div.appendChild(p);
+            
+        }
+        const li = document.querySelector("#second-li");
+        const ul = document.querySelector("ul");
+        
+        ul.addEventListener('click' , function(event){
+
+            console.log(this); // complete UL DOM
+            console.log(this.tagName); // UL
+
+            //target = element that triggered event
+            console.log(event.target); // <li id="second-li">Item 2</li>
+            console.log(event.target.tagName); // LI
+
+            //currentTarget = element that listens to event
+            console.log(event.currentTarget.tagName); // UL
+            showInResult(`handler attached to ${event.currentTarget.tagName} `);
+
+        });
+
+    </script>
+</body>
+</html>

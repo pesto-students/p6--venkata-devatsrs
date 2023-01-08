@@ -1,0 +1,199 @@
+/*  Tag Styles  */
+* {
+  outline: none;
+}
+html {
+  display: inherit;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover ,a:focus {
+  text-decoration: underline;
+}
+/* Reusable class */
+.las-font-size {
+  font-size: 18px;
+}
+.black_color {
+  color: #000;
+}
+.white_color {
+  color: #fff;
+}
+.blue_color {
+  color: blue;
+}
+.h1 {
+  font-size: 20px;
+}
+.bold {
+  font-weight: bold;
+}
+.gray_bg {
+  background-color: #ccc;
+}
+.dark_gray_bg {
+  background-color: #454545;
+}
+.black_border {
+  border: 1px solid black;
+}
+
+a.white_color:hover {
+  color: white;
+  text-decoration: underline;
+}
+a.blue_color:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.flex {
+  display: flex;
+}
+.h_center {
+  justify-content: center;
+  flex-direction: row;
+}
+.row {
+  flex-direction: column;
+  
+  
+}
+.wrap{
+  flex-wrap: wrap;
+}
+.col {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cross_center {
+  flex-direction: column;
+}
+.text_center {
+  text-align: center;
+}
+.container {
+  width: 1024px;
+}
+.gutter{
+  padding: 0 2%;
+}
+/* Reusable class over */
+
+body {
+  font-size: 16px;
+}
+/*  Tag Styles  */
+#app {
+  width: auto;
+}
+
+header > h1 {
+  font-size: 32px;
+  width: 100%;
+  padding: 20px 0;
+}
+footer {
+  margin: 10px 0;
+}
+footer p{
+  font-size: 14px;
+  color: gray;
+}
+
+section > div {
+   width: 430px; 
+   flex-grow: 1;
+}
+
+section .content {
+  justify-content: center;
+  padding: 0 22px;
+}
+
+
+section .content > p {
+  display: flex;
+  justify-content: center;
+
+}
+section .content > p > img {
+  margin: 30px 0;
+}
+
+section form {
+  margin: 10px 0;
+  width: 502px;
+  display: flex;
+  flex-direction: column;
+}
+
+section form > p {
+  display: flex;
+  margin: 5px 0;
+}
+/* form title */
+section form p label:first-child {
+  padding-right: 10px;
+  display: block;
+  width: 26%;
+  text-align: right;
+  padding-top: 8px;
+}
+/* First Title input Labels */
+section form p label:not(:first-child) {
+  padding: 5px 10px;
+}
+
+
+section form p input:not([type='checkbox']):not([type='radio']):not([type='submit']) {
+  padding: 8px 7px;
+  outline: none;
+  border: 1px solid #cdcdcd;
+  background-color: white;
+  width: 70%;
+}
+section form p input:focus{
+  filter:drop-shadow(2px 2px 4px lightgray);
+  border: 1px solid black;
+
+}
+
+section form p select {
+  padding: 8px 7px;
+  outline: none;
+  border: 1px solid #cdcdcd;
+  background-color: white;
+  width: 74%;
+}
+
+section form p input[type=button], input[type=submit], input[type=reset] {
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+section form p input[type=submit]:focus,
+section form p input[type=submit]:hover
+{
+  border: 1px solid black;
+}
+
+/* Terms  */
+section form p.term label:nth-child(3) {
+  /* Question: Why need to select 3rd child as we dont have 3rd label */
+  padding-left: 10px;
+}
+section form p.term a:visited {
+  color: gray;
+
+}

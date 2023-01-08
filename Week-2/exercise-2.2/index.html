@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Head Starts -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Deven Sitapar">
+    <meta name="description" content="Animation Sample">
+
+
+    <!-- The Open Graph protocol :  for social media. -->
+    <meta property="og:title" content="Animation Sample">
+    <meta property="og:description" content="Animation Sample">
+    <meta property="og:image" content="/assets/cattyboard.jpg">
+    <meta property="og:url" content="/index.html">
+    <meta property="og:site_name" content="Animation-Sample">
+
+    <!-- Import Normalize.css : 
+        * Resets all thehas styles that come with the browser’s user agent.	
+        * Provides cross-browser consistency in the default styling of HTML elements which are provided by the browser’s User Agent.
+    -->
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+
+    <!-- Latto Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
+
+    <!-- Line awesome font -->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Page Title -->
+    <title>Animation Sample</title>
+
+</head>
+<!-- Head Ends -->
+
+<body>
+    <!-- Page Starts -->
+
+    <div id="app">
+
+        <header  class="flex h_center ">
+            <div class="flex hibox">
+                <h1 class="text_center  ">Hi</h1>
+                <div class="box red_box"></div>
+                <div class="box blue_box"></div>
+                <div class="box green_box"></div>
+                <div class="box yellow_box"></div>
+            </div>
+        </header>
+
+        <footer >
+            <p>Created by Deven Sitapara at Pesto. &copy; 2022</p>
+        </footer>
+
+    </div>
+    <!-- Page ends -->
+
+    <script>
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+
+            document.querySelector(".hibox").addEventListener("mouseover", function(event){
+                document.querySelector(".red_box").classList.add("hover");
+                document.querySelector(".green_box").classList.add("hover");
+                document.querySelector(".blue_box").classList.add("hover");
+                document.querySelector(".yellow_box").classList.add("hover");
+             });
+             document.querySelector(".hibox").addEventListener("mouseleave", function(event){
+                document.querySelector(".red_box").classList.remove("hover");
+                document.querySelector(".green_box").classList.remove("hover");
+                document.querySelector(".blue_box").classList.remove("hover");
+                document.querySelector(".yellow_box").classList.remove("hover");
+             });
+
+
+ 
+        });
+
+    </script>
+</body>
+</html>
