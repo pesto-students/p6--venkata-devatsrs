@@ -14,6 +14,7 @@ take json data as input and returns json based output and will test using postma
 # Start Creating following Api's
 
 Get all cities 
+
 GET:
 `{baseUrl}/cities`
 
