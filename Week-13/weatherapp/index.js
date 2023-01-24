@@ -18,7 +18,7 @@ app.get('/weather/:city', async (req, res) => {
     const page = req.params.page;
     const apiKey = process.env.WEATHER_KEY;
     const url = 'https://api.openweathermap.org/data/2.5/weather';
-    // https://api.openweathermap.org/data/2.5/weather?q=Rajkot&appid=b54cc6240842536ea568bfba721a59e1
+    // https://api.openweathermap.org/data/2.5/weather?q=Rajkot&appid={token}
     
     const apiUrl = `${url}?q=${city}&appid=${apiKey}&units=metric`
     console.log(apiUrl);
@@ -41,7 +41,7 @@ app.get('/forecast/:city', async (req, res) => {
     const apiKey = process.env.WEATHER_KEY;
     const url = 'https://api.openweathermap.org/data/2.5/forecast/daily';
     
-    //api.openweathermap.org/data/2.5/forecast/daily?lat=22.3&lon=70.7833&appid=b54cc6240842536ea568bfba721a59e1&cnt=2&mode=json
+    //api.openweathermap.org/data/2.5/forecast/daily?lat=22.3&lon=70.7833&appid={token}&cnt=2&mode=json
 
     const apiUrl = `${url}?q=${city}lat=${lat}lon=${lon}cnt=${cnt}&appid=${apiKey}&units=metric&mode=json`
     console.log(apiUrl);
